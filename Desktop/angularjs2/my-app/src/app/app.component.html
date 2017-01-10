@@ -1,0 +1,110 @@
+<header>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		</button>
+		<a  class="navbar-brand" href=""><span style="color: yellow;font-size: 200%">Angular2 App</span><small>.com</small> </a>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+			<li class=""><a href="#/home">Home</a></li>
+			<li class=""><a href="#/resume">Resume</a></li>
+			<li class=""><a href="#/slide">About</a></li>
+
+
+		<li class="dropdown">
+    	<a href="#" class="dropdown-toggle"  data-toggle="dropdown">More Houses
+    	<span class="caret"></span></a>
+    	<ul style="background-color: black;" class="dropdown-menu">
+    	<li  class="dropdown-header"><b> House Websites</b></li>
+        <li><a href="http://www.homefinedr.com" target="_blank"><b>Home Finder</b></a></li>
+        <li><a href="https://www.trulia.com" target="_blank"><b>Trulia</b></a></li>
+        <li><a href="http://www.zillow.com" target="_blank"><b>Zillow</b></a></li>
+
+   			 </ul>
+ 		 </li>
+ 		<li class=""><a href="#">Cart(  )</a></li>
+ 		<li class="form-group" ><a href=""><input style="color: black" type="text" class="form-control" placeholder="Search by text" ng-model="test"></a></li>
+ 		<li class="dropdown">
+    	<a href="#" class="dropdown-toggle"  data-toggle="dropdown"><span class="glyphicon glyphicon-user">Sign In</span>
+    	<span class="caret"></span></a>
+    	<ul style="background-color: black;" class="dropdown-menu">
+    	<li class="" ><a href=""><input style="border-radius: 10px" type="text" placeholder="User name" ></a></li>
+    	<li class="" ><a href=""><input style="border-radius: 10px" type="Password" placeholder="Password" ></a></li>
+    	<li><a style="color: white" href="www.gmail.com">Forget Password</a></li>
+    	<li class=""><a class="glyphicon glyphicon-log-in" style="float: right;background-color:yellow" href="#">Login</a></li><br>
+    	<li class=""><a style="float: right;" href="#">Sign Up</a></li>
+
+
+    	</ul>
+			</ul>
+			</div>
+			</div>			
+	</nav>
+		
+
+</header><br><br><br><br><br>
+
+
+<main>
+  <div class="row">
+    <div class="col-sm-4">
+
+      <div *ngIf="users">
+      <ul class="list-group users-list">
+        <li class="list-group-item"
+          *ngFor="let user of users"
+          (click)="selectUser(user)"
+          [class.active]="user === activeUser">
+          {{ user.name }} ({{ user.username }})
+        </li>
+      </ul>
+      </div>
+
+      
+
+    </div>
+    <div class="col-sm-8">
+    <div class="jumbotron" *ngIf="activeUser" style="padding-left: 10px">
+    	<h2>{{activeUser.id}} <small>{{activeUser.username}}</small></h2>
+
+    </div>
+
+      <div class="jumbotron" *ngIf="!activeUser">
+        <span class="glyphicon glyphicon-hand-left"></span>
+        <h2>Choose a User</h2>
+      </div>
+
+    </div>
+  </div>      
+</main>
+
+<footer class="text-center">
+  Copyright &copy; 2016
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
