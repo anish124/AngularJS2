@@ -13,7 +13,7 @@ export class AppComponent {
   
   users = [
     { id: 25, name: 'madhu', username: 'sanaiahgari' },
-    { id: 26, name: 'sudab', username: 'aakepati' },
+    { id: 26, name: 'sudan', username: 'aakepati' },
     { id: 27, name: 'reddy', username: 'nooka' }
   ];
   activeUser;
